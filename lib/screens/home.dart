@@ -1,4 +1,5 @@
 import 'package:coalescence/screens/stats_bar.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -46,12 +47,18 @@ class _HomeState extends State<Home> {
                         fontFamily: "Dela",
                         fontWeight: FontWeight.w400,
                         foreground: Paint()..shader = linearGradient)),
-                const Text("Website Launching Soon ...",
-                    style: TextStyle(
-                        fontFamily: "Goth",
-                        color: Colors.indigo,
-                        fontSize: 25,
-                        fontWeight: FontWeight.w400)),
+                AnimatedTextKit(
+                  animatedTexts: [
+                    TypewriterAnimatedText("Website Launching Soon ...",
+                        speed: const Duration(milliseconds: 80),
+                        textStyle: const TextStyle(
+                            fontFamily: "Goth",
+                            color: Colors.indigo,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w400))
+                  ],
+                  isRepeatingAnimation: false,
+                ),
               ]),
             ),
           ),
