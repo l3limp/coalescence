@@ -78,7 +78,10 @@ flutter:
   fonts:
     - family: Dela
       fonts:
-        - asset: assets/fonts/DelaGhoticOne.ttf
+        - asset: assets/fonts/DelaGothicOne.ttf
+    - family: Goth
+      fonts:
+        - asset: assets/fonts/GothamBold.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
