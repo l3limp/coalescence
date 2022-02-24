@@ -1,4 +1,4 @@
-import 'package:coalescence/screens/start.dart';
+import 'package:coalescence/screens/stats_bar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -6,7 +6,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const Start(),
+        '/': (context) => const StatsBar(),
       },
     ),
   );
