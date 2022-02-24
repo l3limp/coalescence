@@ -37,7 +37,7 @@ class _StatsBarState extends State<StatsBar>
                   width: _width * 0.6,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
-                    color: Color(0xFFDFC1F7).withOpacity(0.4),
+                    color: const Color(0xFFDFC1F7).withOpacity(0.4),
                   ),
                 ),
                 Positioned(
@@ -97,7 +97,7 @@ class _StatsBarState extends State<StatsBar>
         CurvedAnimation(parent: _animationController, curve: Curves.easeOut));
     return Container(
       width: 95.0,
-      decoration: BoxDecoration(boxShadow: [
+      decoration: const BoxDecoration(boxShadow: [
         BoxShadow(color: Colors.white, spreadRadius: 10, blurRadius: 80)
       ]),
       child: Column(
@@ -111,7 +111,10 @@ class _StatsBarState extends State<StatsBar>
           ),
           Text(
             text2,
-            style: const TextStyle(color: Colors.black, fontSize: 11.0),
+            style: const TextStyle(
+                color: Colors.black,
+                fontSize: 11.0,
+                fontWeight: FontWeight.w500),
           ),
         ],
       ),
