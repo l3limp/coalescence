@@ -19,11 +19,6 @@ class _HomeState extends State<Home> {
       end: Alignment.bottomCenter,
       colors: <Color>[Color(0xFF264CAA), Color(0xFFCF85D7)],
     ).createShader(const Rect.fromLTWH(50.0, 100.0, 200.0, 250.0));
-    final Shader linearGradient2 = const LinearGradient(
-      begin: Alignment.topCenter,
-      end: Alignment.bottomCenter,
-      colors: <Color>[Color(0xFF264CAA), Color(0xFFCF85D7)],
-    ).createShader(const Rect.fromLTWH(10.0, 200.0, 200.0, 250.0));
 
     return Scaffold(
         body: SizedBox(
@@ -54,13 +49,12 @@ class _HomeState extends State<Home> {
                         foreground: Paint()..shader = linearGradient)),
                 AnimatedTextKit(
                   animatedTexts: [
-                    TypewriterAnimatedText("Website Launching Soon ...",
+                    TypewriterAnimatedText("Website Launching Soon ",
                         speed: const Duration(milliseconds: 80),
-                        textStyle: const TextStyle(
+                        textStyle: TextStyle(
                             fontFamily: "Goth",
-                            color: Colors.indigo,
-                            fontSize: 25,
-                            fontWeight: FontWeight.w400, foreground: Paint()..shader = linearGradient2))
+                            fontSize: 22,
+                            color: Colors.black87.withOpacity(0.6)))
                   ],
                   isRepeatingAnimation: false,
                 ),
@@ -69,7 +63,7 @@ class _HomeState extends State<Home> {
           ),
         ),
         Positioned(
-          bottom: _height * 0.08,
+          bottom: _height * 0.065,
           child: SizedBox(
             width: _width,
             height: _height * 0.3,
