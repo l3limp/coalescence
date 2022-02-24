@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class StatsBar extends StatefulWidget {
   const StatsBar({Key? key}) : super(key: key);
@@ -16,7 +15,7 @@ class _StatsBarState extends State<StatsBar>
   void initState() {
     super.initState();
     _animationController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 1400));
+        vsync: this, duration: const Duration(milliseconds: 2000));
     _animationController.forward();
   }
 
@@ -28,45 +27,45 @@ class _StatsBarState extends State<StatsBar>
         animation: _animationController,
         builder: (context, child) {
           return Scaffold(
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.transparent,
             body: Center(
                 child: Stack(
               clipBehavior: Clip.none,
               children: [
                 Container(
-                  height: _height * 0.25,
-                  width: _width * 0.8,
+                  height: _height * 0.2,
+                  width: _width * 0.6,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
-                    color: const Color(0xFFFEF6FF),
+                    color: Color(0xFFDFC1F7).withOpacity(0.4),
                   ),
                 ),
                 Positioned(
                   top: -45.0,
                   child: SizedBox(
-                    width: _width * 0.8,
+                    width: _width * 0.6,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset(
                           'assets/images/participants.png',
-                          width: 90.0,
-                          height: 90.0,
+                          width: 70.0,
+                          height: 70.0,
                         ),
                         Image.asset(
                           'assets/images/startups.png',
-                          width: 90.0,
-                          height: 90.0,
+                          width: 70.0,
+                          height: 70.0,
                         ),
                         Image.asset(
                           'assets/images/speakers.png',
-                          width: 90.0,
-                          height: 90.0,
+                          width: 70.0,
+                          height: 70.0,
                         ),
                         Image.asset(
                           'assets/images/professionals.png',
-                          width: 90.0,
-                          height: 90.0,
+                          width: 70.0,
+                          height: 70.0,
                         ),
                       ],
                     ),
@@ -75,14 +74,14 @@ class _StatsBarState extends State<StatsBar>
                 Positioned(
                   top: 65.0,
                   child: SizedBox(
-                    width: _width * 0.8,
+                    width: _width * 0.6,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        columStructure(3600, "PARTICIPANTS"),
-                        columStructure(340, "STARTUPS"),
-                        columStructure(45, "SPEAKERS"),
-                        columStructure(120, "PROFESSIONALS"),
+                        columnStructure(3600, "PARTICIPANTS"),
+                        columnStructure(340, "STARTUPS"),
+                        columnStructure(45, "SPEAKERS"),
+                        columnStructure(120, "PROFESSIONALS"),
                       ],
                     ),
                   ),
@@ -93,11 +92,14 @@ class _StatsBarState extends State<StatsBar>
         });
   }
 
-  Widget columStructure(int int, String text2) {
+  Widget columnStructure(int int, String text2) {
     animation = IntTween(begin: 0, end: int).animate(
         CurvedAnimation(parent: _animationController, curve: Curves.easeOut));
-    return SizedBox(
-      width: 110.0,
+    return Container(
+      width: 95.0,
+      decoration: BoxDecoration(boxShadow: [
+        BoxShadow(color: Colors.white, spreadRadius: 10, blurRadius: 80)
+      ]),
       child: Column(
         children: [
           Text(
@@ -109,51 +111,10 @@ class _StatsBarState extends State<StatsBar>
           ),
           Text(
             text2,
-            style: const TextStyle(color: Colors.black, fontSize: 12.0),
+            style: const TextStyle(color: Colors.black, fontSize: 11.0),
           ),
         ],
       ),
     );
-    final Shader linearGradient = const LinearGradient(
-      colors: <Color>[Color(0xFF264CAA), Color(0xFFCF85D7)],
-    ).createShader(Rect.fromLTWH(50.0, 5250.0, 1050.0, 1050.0));
-    return Scaffold(
-        body: Container(
-      height: _height,
-      width: _width,
-      child: Stack(children: [
-        Positioned(
-          top: _height * 0.25,
-          child: SizedBox(
-            width: _width,
-            child: Column(children: [
-              Text("COALESCENCE'22",
-                  style: GoogleFonts.delaGothicOne(
-                      fontSize: 90,
-                      fontWeight: FontWeight.w400,
-                      foreground: Paint()..shader = linearGradient)),
-              Text("Inspire. Ideate. Innovate",
-                  style: GoogleFonts.gothicA1(
-                      color: Colors.indigo,
-                      fontSize: 25,
-                      fontWeight: FontWeight.w400))
-            ]),
-          ),
-        ),
-        Positioned(
-          bottom: _height * 0.1,
-          child: SizedBox(
-            width: _width,
-            child: Text("Website Launching Soon ...",
-                textAlign: TextAlign.center,
-                style: GoogleFonts.gothicA1(
-                  color: Colors.indigo,
-                  fontSize: 25,
-                  fontWeight: FontWeight.w500,
-                )),
-          ),
-        )
-      ]),
-    ));
   }
 }
