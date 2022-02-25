@@ -18,7 +18,7 @@ class SmallSocialIcons extends StatelessWidget {
         children: [
           Container(
             height: _height * 0.05,
-            width: _width * 0.3,
+            width: _width * 0.4,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.0),
               color: const Color(0xFFDFC1F7).withOpacity(0.4),
@@ -27,7 +27,7 @@ class SmallSocialIcons extends StatelessWidget {
           Positioned(
             top: -_height * 0.008,
             child: SizedBox(
-              width: _width * 0.3,
+              width: _width * 0.4,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -39,14 +39,14 @@ class SmallSocialIcons extends StatelessWidget {
                       FontAwesomeIcons.instagram,
                       color: Colors.black,
                     ),
-                    iconSize: 15,
+                    iconSize: 10,
                   ),
                   IconButton(
                       onPressed: () {
                         _launchURL(
                             "https://www.linkedin.com/company/celbitsgoa/");
                       },
-                      iconSize: 15,
+                      iconSize: 10,
                       icon: const FaIcon(
                         FontAwesomeIcons.linkedin,
                         color: Color.fromARGB(255, 15, 87, 146),
@@ -55,7 +55,7 @@ class SmallSocialIcons extends StatelessWidget {
                       onPressed: () {
                         _launchURL("https://m.facebook.com/CoalescenceIN/");
                       },
-                      iconSize: 15,
+                      iconSize: 10,
                       icon: const FaIcon(
                         FontAwesomeIcons.facebook,
                         color: Color.fromARGB(255, 15, 87, 146),
@@ -64,7 +64,7 @@ class SmallSocialIcons extends StatelessWidget {
                       onPressed: () {
                         _launchURL("https://www.youtube.com/c/CoalescenceBITS");
                       },
-                      iconSize: 15,
+                      iconSize: 10,
                       icon: const FaIcon(
                         FontAwesomeIcons.youtube,
                         color: Colors.red,
@@ -73,7 +73,7 @@ class SmallSocialIcons extends StatelessWidget {
                       onPressed: () {
                         _launchURL("https://twitter.com/celbitsgoa");
                       },
-                      iconSize: 15,
+                      iconSize: 10,
                       icon: const FaIcon(
                         FontAwesomeIcons.twitter,
                         color: Colors.blue,
