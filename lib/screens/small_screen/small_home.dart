@@ -1,16 +1,15 @@
-import 'package:coalescence/screens/large_screen/stats_bar.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'small_stats_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-class LargeHome extends StatefulWidget {
-  const LargeHome({Key? key}) : super(key: key);
+class SmallHome extends StatefulWidget {
+  const SmallHome({Key? key}) : super(key: key);
 
   @override
-  _LargeHomeState createState() => _LargeHomeState();
+  _SmallHomeState createState() => _SmallHomeState();
 }
 
-class _LargeHomeState extends State<LargeHome> {
+class _SmallHomeState extends State<SmallHome> {
   @override
   Widget build(BuildContext context) {
     double _height = MediaQuery.of(context).size.height;
@@ -40,7 +39,7 @@ class _LargeHomeState extends State<LargeHome> {
           ),
         ),
         Positioned(
-          top: _height * 0.27,
+          top: _height * 0.32,
           child: SizedBox(
             width: _width,
             child: Container(
@@ -49,7 +48,7 @@ class _LargeHomeState extends State<LargeHome> {
               child: Column(children: [
                 Text("COALESCENCE'22",
                     style: TextStyle(
-                        fontSize: 90,
+                        fontSize: 31,
                         fontFamily: "Dela",
                         fontWeight: FontWeight.w400,
                         foreground: Paint()..shader = linearGradient)),
@@ -59,7 +58,7 @@ class _LargeHomeState extends State<LargeHome> {
                         speed: const Duration(milliseconds: 140),
                         textStyle: TextStyle(
                             fontFamily: "Goth",
-                            fontSize: 25,
+                            fontSize: 13,
                             fontWeight: FontWeight.w400,
                             foreground: Paint()..shader = linearGradient2))
                   ],
@@ -71,12 +70,11 @@ class _LargeHomeState extends State<LargeHome> {
           ),
         ),
         Positioned(
-          bottom: _height * 0.08,
-
+          bottom: _height * 0.15,
           child: SizedBox(
             width: _width,
             height: _height * 0.3,
-            child: const StatsBar(),
+            child: const SmallStatsBar(),
           ),
         ),
         Positioned(
@@ -85,8 +83,8 @@ class _LargeHomeState extends State<LargeHome> {
           child: Container(
             decoration: const BoxDecoration(
                 boxShadow: [BoxShadow(color: Colors.white, blurRadius: 70)]),
-            height: 70,
-            width: 120,
+            height: 40,
+            width: 80,
             child: Image.asset(
               "assets/images/light_cel_2.png",
               fit: BoxFit.cover,

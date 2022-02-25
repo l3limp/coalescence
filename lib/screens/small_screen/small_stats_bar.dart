@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class StatsBar extends StatefulWidget {
-  const StatsBar({Key? key}) : super(key: key);
+class SmallStatsBar extends StatefulWidget {
+  const SmallStatsBar({Key? key}) : super(key: key);
 
   @override
-  State<StatsBar> createState() => _StatsBarState();
+  _SmallStatsBarState createState() => _SmallStatsBarState();
 }
 
-class _StatsBarState extends State<StatsBar>
+class _SmallStatsBarState extends State<SmallStatsBar>
     with SingleTickerProviderStateMixin {
   late Animation animation;
   late AnimationController _animationController;
@@ -33,7 +33,7 @@ class _StatsBarState extends State<StatsBar>
               clipBehavior: Clip.none,
               children: [
                 Container(
-                  height: _height * 0.2,
+                  height: _height * 0.15,
                   width: _width * 0.6,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
@@ -41,7 +41,7 @@ class _StatsBarState extends State<StatsBar>
                   ),
                 ),
                 Positioned(
-                  top: -45.0,
+                  top: -20.0,
                   child: SizedBox(
                     width: _width * 0.6,
                     child: Row(
@@ -49,39 +49,47 @@ class _StatsBarState extends State<StatsBar>
                       children: [
                         Image.asset(
                           'assets/images/participants.png',
-                          width: 70.0,
-                          height: 70.0,
+                          width: 35.0,
+                          height: 35.0,
                         ),
                         Image.asset(
                           'assets/images/startups.png',
-                          width: 70.0,
-                          height: 70.0,
+                          width: 35.0,
+                          height: 35.0,
                         ),
                         Image.asset(
                           'assets/images/speakers.png',
-                          width: 70.0,
-                          height: 70.0,
+                          width: 35.0,
+                          height: 35.0,
                         ),
                         Image.asset(
                           'assets/images/professionals.png',
-                          width: 70.0,
-                          height: 70.0,
+                          width: 35.0,
+                          height: 35.0,
                         ),
                       ],
                     ),
                   ),
                 ),
                 Positioned(
-                  top: 65.0,
+                  top: 35.0,
                   child: SizedBox(
                     width: _width * 0.6,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        columnStructure(3600, "PARTICIPANTS"),
+                        Padding(
+                          padding:
+                              const EdgeInsets.fromLTRB(5.0, 0.0, 0.0, 0.0),
+                          child: columnStructure(3600, "PARTICIPANTS"),
+                        ),
                         columnStructure(340, "STARTUPS"),
                         columnStructure(45, "SPEAKERS"),
-                        columnStructure(120, "PROFESSIONALS"),
+                        Padding(
+                          padding:
+                              const EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 0.0),
+                          child: columnStructure(120, "PROFESSIONALS"),
+                        ),
                       ],
                     ),
                   ),
@@ -96,7 +104,7 @@ class _StatsBarState extends State<StatsBar>
     animation = IntTween(begin: 0, end: int).animate(
         CurvedAnimation(parent: _animationController, curve: Curves.easeOut));
     return Container(
-      width: 95.0,
+      width: 55.0,
       decoration: const BoxDecoration(boxShadow: [
         BoxShadow(color: Colors.white, spreadRadius: 10, blurRadius: 80)
       ]),
@@ -106,14 +114,14 @@ class _StatsBarState extends State<StatsBar>
             animation.value.toString(),
             style: const TextStyle(
                 color: Color(0xFF8E70C6),
-                fontSize: 30.0,
+                fontSize: 18.0,
                 fontWeight: FontWeight.w600),
           ),
           Text(
             text2,
             style: const TextStyle(
                 color: Colors.black,
-                fontSize: 11.0,
+                fontSize: 6.0,
                 fontWeight: FontWeight.w500),
           ),
         ],
