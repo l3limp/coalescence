@@ -53,6 +53,15 @@ class SmallSocialIcons extends StatelessWidget {
                       )),
                   IconButton(
                       onPressed: () {
+                        _launchURL("https://m.facebook.com/CoalescenceIN/");
+                      },
+                      iconSize: 15,
+                      icon: const FaIcon(
+                        FontAwesomeIcons.twitter,
+                        color: Color.fromARGB(255, 15, 87, 146),
+                      )),
+                  IconButton(
+                      onPressed: () {
                         _launchURL("https://www.youtube.com/c/CoalescenceBITS");
                       },
                       iconSize: 15,

@@ -62,6 +62,19 @@ class LargeIconsBar extends StatelessWidget {
                   ]),
                   child: IconButton(
                       onPressed: () {
+                        _launchURL("https://m.facebook.com/CoalescenceIN/");
+                      },
+                      icon: const FaIcon(
+                        FontAwesomeIcons.linkedin,
+                        color: Color.fromARGB(255, 15, 87, 146),
+                      )),
+                ),
+                Container(
+                  decoration: const BoxDecoration(boxShadow: [
+                    BoxShadow(color: Colors.white, blurRadius: 40)
+                  ]),
+                  child: IconButton(
+                      onPressed: () {
                         _launchURL("https://www.youtube.com/c/CoalescenceBITS");
                       },
                       icon: const FaIcon(
