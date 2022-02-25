@@ -72,6 +72,7 @@ class _LargeHomeState extends State<LargeHome> {
         ),
         Positioned(
           bottom: _height * 0.08,
+
           child: SizedBox(
             width: _width,
             height: _height * 0.3,
