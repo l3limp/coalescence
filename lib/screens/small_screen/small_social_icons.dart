@@ -18,7 +18,7 @@ class SmallSocialIcons extends StatelessWidget {
         children: [
           Container(
             height: _height * 0.05,
-            width: _width * 0.4,
+            width: _width * 0.7,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.0),
               color: const Color(0xFFDFC1F7).withOpacity(0.4),
@@ -27,7 +27,7 @@ class SmallSocialIcons extends StatelessWidget {
           Positioned(
             top: -_height * 0.008,
             child: SizedBox(
-              width: _width * 0.4,
+              width: _width * 0.7,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -72,16 +72,6 @@ class SmallSocialIcons extends StatelessWidget {
                       icon: const FaIcon(
                         FontAwesomeIcons.youtube,
                         color: Colors.red,
-                      )),
-                  IconButton(
-                      onPressed: () {
-                        _launchURL("https://twitter.com/celbitsgoa");
-                      },
-                      iconSize: 10,
-                      splashRadius: 15,
-                      icon: const FaIcon(
-                        FontAwesomeIcons.twitter,
-                        color: Colors.blue,
                       )),
                 ],
               ),
