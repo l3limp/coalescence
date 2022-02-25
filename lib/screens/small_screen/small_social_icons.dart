@@ -57,7 +57,7 @@ class SmallSocialIcons extends StatelessWidget {
                       },
                       iconSize: 15,
                       icon: const FaIcon(
-                        FontAwesomeIcons.twitter,
+                        FontAwesomeIcons.facebook,
                         color: Color.fromARGB(255, 15, 87, 146),
                       )),
                   IconButton(

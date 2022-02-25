@@ -65,7 +65,7 @@ class LargeIconsBar extends StatelessWidget {
                         _launchURL("https://m.facebook.com/CoalescenceIN/");
                       },
                       icon: const FaIcon(
-                        FontAwesomeIcons.linkedin,
+                        FontAwesomeIcons.facebook,
                         color: Color.fromARGB(255, 15, 87, 146),
                       )),
                 ),
