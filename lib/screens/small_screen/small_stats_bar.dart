@@ -33,7 +33,7 @@ class _SmallStatsBarState extends State<SmallStatsBar>
               clipBehavior: Clip.none,
               children: [
                 Container(
-                  height: _height * 0.1,
+                  height: _height * 0.11,
                   width: _width * 0.6,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
@@ -72,7 +72,7 @@ class _SmallStatsBarState extends State<SmallStatsBar>
                   ),
                 ),
                 Positioned(
-                  top: 35.0,
+                  top: 30.0,
                   child: SizedBox(
                     width: _width * 0.6,
                     child: Row(

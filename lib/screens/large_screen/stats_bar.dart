@@ -72,7 +72,7 @@ class _StatsBarState extends State<StatsBar>
                   ),
                 ),
                 Positioned(
-                  top: 65.0,
+                  top: 50.0,
                   child: SizedBox(
                     width: _width * 0.6,
                     child: Row(

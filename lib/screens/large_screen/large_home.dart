@@ -1,3 +1,4 @@
+import 'package:coalescence/screens/large_screen/large_social_icons.dart';
 import 'package:coalescence/screens/large_screen/stats_bar.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
@@ -72,11 +73,18 @@ class _LargeHomeState extends State<LargeHome> {
         ),
         Positioned(
           bottom: _height * 0.08,
-
           child: SizedBox(
             width: _width,
             height: _height * 0.3,
             child: const StatsBar(),
+          ),
+        ),
+        Positioned(
+          bottom: _height * 0.02,
+          child: SizedBox(
+            width: _width,
+            height: _height * 0.065,
+            child: const LargeIconsBar(),
           ),
         ),
         Positioned(

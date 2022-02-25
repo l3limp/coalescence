@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:coalescence/screens/small_screen/small_social_icons.dart';
 import 'small_stats_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -75,6 +76,14 @@ class _SmallHomeState extends State<SmallHome> {
             width: _width,
             height: _height * 0.3,
             child: const SmallStatsBar(),
+          ),
+        ),
+        Positioned(
+          bottom: _height * 0.05,
+          child: SizedBox(
+            width: _width,
+            height: _height * 0.1,
+            child: const SmallSocialIcons(),
           ),
         ),
         Positioned(
