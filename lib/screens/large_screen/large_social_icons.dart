@@ -37,6 +37,7 @@ class LargeIconsBar extends StatelessWidget {
                       onPressed: () {
                         _launchURL("https://www.instagram.com/celbitsgoa/");
                       },
+                      iconSize: 20,
                       icon: const FaIcon(
                         FontAwesomeIcons.instagram,
                         color: Colors.black,
@@ -51,6 +52,7 @@ class LargeIconsBar extends StatelessWidget {
                         _launchURL(
                             "https://www.linkedin.com/company/celbitsgoa/");
                       },
+                      iconSize: 20,
                       icon: const FaIcon(
                         FontAwesomeIcons.linkedin,
                         color: Color.fromARGB(255, 15, 87, 146),
@@ -64,6 +66,7 @@ class LargeIconsBar extends StatelessWidget {
                       onPressed: () {
                         _launchURL("https://m.facebook.com/CoalescenceIN/");
                       },
+                      iconSize: 20,
                       icon: const FaIcon(
                         FontAwesomeIcons.facebook,
                         color: Color.fromARGB(255, 15, 87, 146),
@@ -77,6 +80,7 @@ class LargeIconsBar extends StatelessWidget {
                       onPressed: () {
                         _launchURL("https://www.youtube.com/c/CoalescenceBITS");
                       },
+                      iconSize: 20,
                       icon: const FaIcon(
                         FontAwesomeIcons.youtube,
                         color: Colors.red,
@@ -90,6 +94,7 @@ class LargeIconsBar extends StatelessWidget {
                       onPressed: () {
                         _launchURL("https://twitter.com/celbitsgoa");
                       },
+                      iconSize: 20,
                       icon: const FaIcon(
                         FontAwesomeIcons.twitter,
                         color: Colors.blue,
