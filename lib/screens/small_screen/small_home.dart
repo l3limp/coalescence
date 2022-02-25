@@ -30,77 +30,85 @@ class _SmallHomeState extends State<SmallHome> {
         body: SizedBox(
       height: _height,
       width: _width,
-      child: Stack(children: [
-        SizedBox(
+      child: SingleChildScrollView(
+        child: SizedBox(
           height: _height,
           width: _width,
-          child: Image.asset(
-            "assets/images/aaa.png",
-            fit: BoxFit.cover,
-          ),
-        ),
-        Positioned(
-          top: _height * 0.32,
-          child: SizedBox(
-            width: _width,
-            child: Container(
-              decoration: const BoxDecoration(
-                  boxShadow: [BoxShadow(color: Colors.white, blurRadius: 150)]),
-              child: Column(children: [
-                Text("COALESCENCE'22",
-                    style: TextStyle(
-                        fontSize: 31,
-                        fontFamily: "Dela",
-                        fontWeight: FontWeight.w400,
-                        foreground: Paint()..shader = linearGradient)),
-                AnimatedTextKit(
-                  animatedTexts: [
-                    TypewriterAnimatedText("Website Launching Soon",
-                        speed: const Duration(milliseconds: 140),
-                        textStyle: TextStyle(
-                            fontFamily: "Goth",
-                            fontSize: 13,
+          child: Stack(children: [
+            SizedBox(
+              height: _height,
+              width: _width,
+              child: Image.asset(
+                "assets/images/aaa.png",
+                fit: BoxFit.cover,
+              ),
+            ),
+            Positioned(
+              top: _height * 0.32,
+              child: SizedBox(
+                width: _width,
+                child: Container(
+                  decoration: const BoxDecoration(boxShadow: [
+                    BoxShadow(color: Colors.white, blurRadius: 150)
+                  ]),
+                  child: Column(children: [
+                    Text("COALESCENCE'22",
+                        style: TextStyle(
+                            fontSize: 31,
+                            fontFamily: "Dela",
                             fontWeight: FontWeight.w400,
-                            foreground: Paint()..shader = linearGradient2))
-                  ],
-                  isRepeatingAnimation: true,
-                  totalRepeatCount: 1,
+                            foreground: Paint()..shader = linearGradient)),
+                    AnimatedTextKit(
+                      animatedTexts: [
+                        TypewriterAnimatedText("Website Launching Soon",
+                            speed: const Duration(milliseconds: 140),
+                            textStyle: TextStyle(
+                                fontFamily: "Goth",
+                                fontSize: 13,
+                                fontWeight: FontWeight.w400,
+                                foreground: Paint()..shader = linearGradient2))
+                      ],
+                      isRepeatingAnimation: true,
+                      totalRepeatCount: 1,
+                    ),
+                  ]),
                 ),
-              ]),
+              ),
             ),
-          ),
-        ),
-        Positioned(
-          bottom: _height * 0.15,
-          child: SizedBox(
-            width: _width,
-            height: _height * 0.3,
-            child: const SmallStatsBar(),
-          ),
-        ),
-        Positioned(
-          bottom: _height * 0.05,
-          child: SizedBox(
-            width: _width,
-            height: _height * 0.1,
-            child: const SmallSocialIcons(),
-          ),
-        ),
-        Positioned(
-          top: _height * 0.02,
-          left: _width * 0.01,
-          child: Container(
-            decoration: const BoxDecoration(
-                boxShadow: [BoxShadow(color: Colors.white, blurRadius: 70)]),
-            height: 40,
-            width: 80,
-            child: Image.asset(
-              "assets/images/light_cel_2.png",
-              fit: BoxFit.cover,
+            Positioned(
+              bottom: _height * 0.15,
+              child: SizedBox(
+                width: _width,
+                height: _height * 0.3,
+                child: const SmallStatsBar(),
+              ),
             ),
-          ),
+            Positioned(
+              bottom: _height * 0.05,
+              child: SizedBox(
+                width: _width,
+                height: _height * 0.1,
+                child: const SmallSocialIcons(),
+              ),
+            ),
+            Positioned(
+              top: _height * 0.02,
+              left: _width * 0.01,
+              child: Container(
+                decoration: const BoxDecoration(boxShadow: [
+                  BoxShadow(color: Colors.white, blurRadius: 70)
+                ]),
+                height: 40,
+                width: 80,
+                child: Image.asset(
+                  "assets/images/light_cel_2.png",
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ]),
         ),
-      ]),
+      ),
     ));
   }
 }
