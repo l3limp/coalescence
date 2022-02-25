@@ -1,4 +1,4 @@
-import 'package:coalescence/screens/stats_bar.dart';
+import 'package:coalescence/screens/large_screen/stats_bar.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
