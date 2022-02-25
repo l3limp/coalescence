@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
                 AnimatedTextKit(
                   animatedTexts: [
                     TypewriterAnimatedText("Website Launching Soon ",
-                        speed: const Duration(milliseconds: 80),
+                        speed: const Duration(milliseconds: 120),
                         textStyle: TextStyle(
                             fontFamily: "Goth",
                             fontSize: 22,

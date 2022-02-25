@@ -15,7 +15,7 @@ class _StatsBarState extends State<StatsBar>
   void initState() {
     super.initState();
     _animationController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 2000));
+        vsync: this, duration: const Duration(milliseconds: 2500));
     _animationController.forward();
   }
 
