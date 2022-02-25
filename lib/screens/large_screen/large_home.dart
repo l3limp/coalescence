@@ -1,15 +1,16 @@
-import 'package:coalescence/screens/stats_bar.dart';
+import 'package:coalescence/screens/large_screen/stats_bar.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class LargeHome extends StatefulWidget {
+  const LargeHome({Key? key}) : super(key: key);
 
   @override
-  _HomeState createState() => _HomeState();
+  _LargeHomeState createState() => _LargeHomeState();
 }
 
-class _HomeState extends State<Home> {
+class _LargeHomeState extends State<LargeHome> {
   @override
   Widget build(BuildContext context) {
     double _height = MediaQuery.of(context).size.height;
@@ -54,15 +55,16 @@ class _HomeState extends State<Home> {
                         foreground: Paint()..shader = linearGradient)),
                 AnimatedTextKit(
                   animatedTexts: [
-                    TypewriterAnimatedText("Website Launching Soon ...",
-                        speed: const Duration(milliseconds: 80),
-                        textStyle: const TextStyle(
+                    TypewriterAnimatedText("Website Launching Soon",
+                        speed: const Duration(milliseconds: 140),
+                        textStyle: TextStyle(
                             fontFamily: "Goth",
-                            color: Colors.indigo,
                             fontSize: 25,
-                            fontWeight: FontWeight.w400, foreground: Paint()..shader = linearGradient2))
+                            fontWeight: FontWeight.w400,
+                            foreground: Paint()..shader = linearGradient2))
                   ],
-                  isRepeatingAnimation: false,
+                  isRepeatingAnimation: true,
+                  totalRepeatCount: 1,
                 ),
               ]),
             ),
